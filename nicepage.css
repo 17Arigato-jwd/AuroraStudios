@@ -46337,9 +46337,10 @@ a.u-link.u-text-hover-grey-90:hover {
     margin-right: 0;
   }
 }
-button {
-    transition: 0.4s;
+.u-btn, .u-btn-1 {
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out !important;
 }
+
 
  /*begin-variables base-font-size*/
  html { font-size: 16px; }
