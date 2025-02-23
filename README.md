@@ -1,1 +1,6 @@
-<iframe src="https://discord.com/widget?id=1328158387472695416&theme=dark" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+<a href="https://your-link.com" style="text-decoration: none;">
+  <button style="display: flex; align-items: center; background-color: #4CAF50; color: white; border: none; padding: 10px; cursor: pointer;">
+    <img src="URL_to_icon" alt="Icon" style="width: 20px; height: 20px; margin-right: 8px;">
+    Button Text
+  </button>
+</a>
