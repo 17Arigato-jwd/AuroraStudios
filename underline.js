@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         item.addEventListener("mouseleave", () => {
-            resetTimeout = setTimeout(setActiveTab, 75); // Only reset after 0.075s if no new hover
+            resetTimeout = setTimeout(setActiveTab, 200); // Only reset after 0.2s if no new hover
         });
     });
 
