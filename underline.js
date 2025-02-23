@@ -64,9 +64,17 @@ document.addEventListener("DOMContentLoaded", function () {
     setActiveTab(); // Set the underline on page load
 
     // Move underline on hover
+    let resetTimeout; // Store the timeout reference
+
     navItems.forEach(item => {
-        item.addEventListener("mouseenter", () => moveUnderline(item));
-        item.addEventListener("mouseleave", setActiveTab);
+        item.addEventListener("mouseenter", () => {
+            clearTimeout(resetTimeout); // Cancel reset if moving between tabs
+            moveUnderline(item);
+        });
+
+        item.addEventListener("mouseleave", () => {
+            resetTimeout = setTimeout(setActiveTab, 75); // Only reset after 0.075s if no new hover
+        });
     });
 
     // Update active tab when clicking a new tab
