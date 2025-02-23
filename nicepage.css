@@ -44535,7 +44535,11 @@ a.u-link.u-text-hover-grey-90:hover {
         a.u-button-style.u-button-style.u-border-active-custom-color-4.active,
         a.u-button-style.u-button-style.active > .u-border-active-custom-color-4,
         li.active > a.u-button-style.u-button-style.u-border-active-custom-color-4,
-        input.u-field-input.u-field-input.u-border-active-custom-color-4:checked
+        input.u-field-input.u-field-input.u-border-active-custom-color-4:checked {
+            border-bottom: none !important; /* Remove old underline */
+        }
+
+
         {
             color: #372e9b !important;
             border-color: #372e9b !important;
@@ -46340,6 +46344,38 @@ a.u-link.u-text-hover-grey-90:hover {
 .u-btn, .u-btn-1 {
     transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out !important;
 }
+
+/* Smooth Text Color Transition */
+.u-nav .u-nav-link {
+    transition: color 0.4s ease-in-out;
+}
+
+/* Moving Underline Effect */
+.u-nav {
+    position: relative;
+}
+
+/* Moving Underline Effect */
+.u-nav-underline {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: #5c4eff !important; /* Change to your desired color */
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.u-nav-item a {
+    border-bottom: none !important; /* Force remove old underline */
+}
+
+.u-nav {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
 
 
  /*begin-variables base-font-size*/
