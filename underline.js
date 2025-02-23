@@ -45,17 +45,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let activeTab = getActiveTab(); // Always follows the requested format
 
     function setActiveTab() {
-        activeTab = getActiveTab(); // Get the detected active tab
+        setTimeout(() => { // Delay execution to ensure the menu is fully loaded
+            activeTab = getActiveTab(); // Get detected active tab
 
-        // If we're inside the /products/ folder, force "Top Covers" to be active
-        if (window.location.pathname.toLowerCase().includes("/products/")) {
-            activeTab = document.querySelector(".u-nav-item a[href*='products.html']") || activeTab;
-        }
+            // Force "Top Covers" as active if in /products/
+            if (window.location.pathname.toLowerCase().includes("/products/")) {
+                activeTab = document.querySelector(".u-nav-item a[href*='products.html']") || activeTab;
+            }
 
-        if (activeTab) {
-            moveUnderline(activeTab);
-        }
+            if (activeTab) {
+                moveUnderline(activeTab);
+            }
+        }, 200); // Delay by 200ms to allow menu rendering
     }
+
 
 
     setActiveTab(); // Set the underline on page load
