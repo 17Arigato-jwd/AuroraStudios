@@ -46376,6 +46376,13 @@ a.u-link.u-text-hover-grey-90:hover {
     align-items: center !important;
 }
 
+#header .u-sheet-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Adjusts spacing between elements */
+}
+
 
 
  /*begin-variables base-font-size*/
