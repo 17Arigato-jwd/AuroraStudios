@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return document.querySelector(".u-nav-item a[href$='Home.html']");
         } else if (currentPath === "about.html") {
             return document.querySelector(".u-nav-item a[href$='About.html']");
-        } else if (currentPath === "contact.html") {
-            return document.querySelector(".u-nav-item a[href$='Contact.html']");
+        } else if (currentPath === "auroralis.html") {
+            return document.querySelector(".u-nav-item a[href$='Auroralis.html']");
         }
 
         // Check if the page is inside the /products/ folder
